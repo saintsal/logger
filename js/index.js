@@ -14,7 +14,7 @@ var Stopwatch = (function() {
 					},
 					init: function() {
 						s = this.settings;
-						setInterval(this.timer, 1);
+						setInterval(this.timer, 1000);
 					},
 					clear: function() {
 						s.i = 1,
@@ -55,17 +55,13 @@ var Stopwatch = (function() {
 					},
 					timer: function() {
 						if (s.stop === 0) {
-							if (s.mills === 100) {
-								s.secs++;
-								s.mills = 0;
-							}
 							if (s.secs === 60) {
 								s.mins++;
 								s.secs = 0;
 							}
 							s.sw.innerHTML = ("0" + s.mins).slice(-2) + ":"
 								 						 + ("0" + s.secs).slice(-2)  ;
-							s.mills++;
+							s.secs++;
 						}
 					}
 				};
