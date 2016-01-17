@@ -14,6 +14,7 @@ var Stopwatch = (function() {
 					},
 					init: function() {
 						s = this.settings;
+            s.stop = 1;
 						setInterval(this.timer, 1000);
 					},
 					clear: function() {
