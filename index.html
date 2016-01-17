@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Simple Logger</title>
+        <style>
+    /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #333;
+  color: lime;
+  font-family: Menlo;
+}
+
+.controls {
+  text-align: left;
+  top: 1em;
+  width: 100%;
+  word-spacing: 2em;
+  padding: 1em;
+}
+
+.button {
+  color: lime;
+  text-decoration: none;
+}
+
+.button:hover {
+  color: white;
+}
+
+.stopwatch {
+}
+
+textarea {
+  width: 100%;
+  height: 80vh;
+  margin: 1em;
+}
+
+.results {
+  border-color: lime;
+  margin: 0 auto;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 10em;
+}
+    </style>
+
+    
+        <script src="js/prefixfree.min.js"></script>
+
+    
+  </head>
+
+  <body>
+
+    <nav class="controls">
+      <span id="stopwatch" class="stopwatch"></span>
+			<a href="#" class="button" onClick="Stopwatch.start();">Start</a>
+			<a href="#" class="button" onClick="Stopwatch.lap();">Lap</a>
+			<a href="#" class="button" onClick="Stopwatch.stop();">Stop</a>
+			<a href="#" class="button" onClick="Stopwatch.restart();">Restart</a>
+		</nav>
+    <textarea id="log"></textarea>
+		<table class="results"></table>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
